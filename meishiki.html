@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head> <link rel="apple-touch-icon" href="命式作成.png">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
@@ -299,42 +299,40 @@ function calcDaiun(birthY, birthM, birthD, monthPillarIdx, yearStem, gender, bir
   // 順行: 陽男・陰女, 逆行: 陰男・陽女
   const isForward = (isYangStem && isMale) || (!isYangStem && !isMale);
 
-  // 節入り時刻をミリ秒で取得
-  function getTermMs(y, calMonth) {
+  // 節入り日を取得（日付のみ・時刻は使わない）
+  function getTermDate(y, calMonth) {
     const t = ST[y] && ST[y][calMonth];
     if (!t) return null;
-    return new Date(y, calMonth - 1, t.d, t.h, t.m).getTime();
+    return new Date(y, calMonth - 1, t.d).getTime();
   }
 
-  // 生年月日のDate
+  // 生年月日のDate（時刻は使わない＝誕生日0:00基準で日付差を取る）
   const birthDate = new Date(birthY, birthM - 1, birthD).getTime();
 
   let days;
   if (isForward) {
-    // 次の節入り日までの日数
-    // 当月の節入りが過ぎていれば次月、まだなら当月
-    const thisTermMs = getTermMs(birthY, birthM);
+    // 次の節入り日までの日数（節入り日まで数え、誕生日はカウントしない）
+    const thisTermMs = getTermDate(birthY, birthM);
     let nextTermMs, nextY = birthY, nextMo = birthM;
     if (thisTermMs !== null && birthDate < thisTermMs) {
       nextTermMs = thisTermMs;
     } else {
-      // 次の月へ
       nextMo = birthM === 12 ? 1 : birthM + 1;
       nextY = birthM === 12 ? birthY + 1 : birthY;
-      nextTermMs = getTermMs(nextY, nextMo);
+      nextTermMs = getTermDate(nextY, nextMo);
     }
     if (!nextTermMs) return null;
     days = Math.round((nextTermMs - birthDate) / 86400000);
   } else {
     // 前の節入り日までの日数
-    const thisTermMs = getTermMs(birthY, birthM);
+    const thisTermMs = getTermDate(birthY, birthM);
     let prevTermMs;
     if (thisTermMs !== null && birthDate >= thisTermMs) {
       prevTermMs = thisTermMs;
     } else {
       const prevMo = birthM === 1 ? 12 : birthM - 1;
       const prevY = birthM === 1 ? birthY - 1 : birthY;
-      prevTermMs = getTermMs(prevY, prevMo);
+      prevTermMs = getTermDate(prevY, prevMo);
     }
     if (!prevTermMs) return null;
     days = Math.round((birthDate - prevTermMs) / 86400000);
