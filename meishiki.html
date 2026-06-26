@@ -16,7 +16,7 @@ h1 { text-align: center; font-size: 1.6rem; font-weight: 500; color: #7babdb; le
 .container { max-width: 560px; margin: 0 auto; }
 .card { background: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
 label { font-size: 13px; color: #333333; display: block; margin-bottom: 6px; }
-input, select { width: 100%; max-width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px; margin-bottom: 1rem; color: #333; background: #fafafa; box-sizing: border-box; -webkit-appearance: none; appearance: none; }
+input, select { width: 100%; max-width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px; font-family: inherit; margin-bottom: 1rem; color: #333; background: #fafafa; box-sizing: border-box; -webkit-appearance: none; appearance: none; }
 input:focus, select:focus { outline: none; border-color: #7babdb; background: #fff; }
 input:focus { color: #7babdb; }
 button { width: 100%; padding: 12px; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 8px; background: #7babdb; border: none; color: #fff; letter-spacing: 0.05em; }
@@ -267,7 +267,8 @@ function hourIdx(dIdx,h){
   let hBranch;
   if(h===0||h===23)hBranch=0;
   else hBranch=Math.floor((h+1)/2)%12;
-  const dStem=dIdx%10;
+  // 夜子時(23時台)は翌日の日干で時干を出す（日柱は当日のまま）
+  const dStem=(h===23?(dIdx+1):dIdx)%10;
   const base=[0,2,4,6,8,0,2,4,6,8];
   const hStem=(base[dStem]+hBranch)%10;
   return gzIdx(hStem,hBranch);
