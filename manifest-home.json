@@ -1,0 +1,14 @@
+{
+  "name": "ユンスル四柱推命",
+  "short_name": "ユンスル",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "ja",
+  "background_color": "#efe8dd",
+  "theme_color": "#efe8dd",
+  "icons": [
+    { "src": "./icon-home-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icon-home-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "今日のこよみ",
+  "short_name": "こよみ",
+  "start_url": "./kyou-no-kanshi.html",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "ja",
+  "background_color": "#efe8dd",
+  "theme_color": "#efe8dd",
+  "icons": [
+    { "src": "./icon-koyomi-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icon-koyomi-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
