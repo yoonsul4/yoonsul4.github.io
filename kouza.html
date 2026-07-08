@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#efe8dd">
+<title>講座のご案内｜ユンスル四柱推命</title>
+<meta name="description" content="ユンスル四柱推命講座（全16回・少人数制）。五行バランスと情景から命式を読み解き、鑑定師として活動できる実践的な知識を身につけます。">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #efe8dd; color-scheme: light; }
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  background: #efe8dd; color: #333;
+  min-height: 100vh; padding: 2.2rem 1rem 2rem;
+  line-height: 1.8;
+}
+.container { max-width: 560px; margin: 0 auto; }
+
+.back {
+  display: inline-block; font-size: 0.8rem; color: #7babdb;
+  text-decoration: none; margin-bottom: 1.4rem; letter-spacing: 0.08em;
+}
+.back:hover { text-decoration: underline; }
+
+.pagehead { text-align: center; margin-bottom: 2.2rem; }
+.pagehead h1 {
+  font-family: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
+  font-weight: 700; font-size: 1.45rem; color: #7babdb;
+  letter-spacing: 0.22em; padding-left: 0.22em;
+}
+.pagehead .sub {
+  font-size: 0.8rem; color: #8a8377; letter-spacing: 0.15em; margin-top: 0.3rem;
+}
+
+.card {
+  background: #fff; border-radius: 12px;
+  padding: 1.5rem; margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.card h2 {
+  font-family: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
+  font-weight: 700; font-size: 1.05rem; color: #333;
+  letter-spacing: 0.1em; margin-bottom: 0.7rem;
+}
+.card h2 .en {
+  display: block; font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400; font-size: 0.68rem; color: #b9b1a3;
+  letter-spacing: 0.25em; margin-bottom: 0.15rem;
+}
+.card p { font-size: 0.88rem; color: #555; }
+
+/* 目標 */
+.goal {
+  background: #f2f7fc; border-radius: 8px;
+  padding: 0.9rem 1rem; margin-top: 0.8rem;
+  font-size: 0.9rem; color: #333;
+}
+.goal + .goal { margin-top: 0.6rem; }
+.goal strong { color: #5f8fc0; font-weight: 500; }
+
+/* 概要リスト */
+.spec { list-style: none; margin-top: 0.4rem; }
+.spec li {
+  font-size: 0.9rem; padding: 0.55rem 0 0.55rem 1.4rem;
+  border-bottom: 1px dashed #efe8dd; position: relative;
+}
+.spec li:last-child { border-bottom: none; }
+.spec li::before {
+  content: ""; position: absolute; left: 0.2em; top: 1.05em;
+  width: 7px; height: 7px; border-radius: 50%; background: #7babdb;
+}
+
+/* 数字 */
+.nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 0.8rem; }
+.num { text-align: center; background: #fdfbf7; border-radius: 8px; padding: 0.9rem 0.3rem; }
+.num .v {
+  font-family: 'Zen Maru Gothic', sans-serif; font-weight: 700;
+  font-size: 1.25rem; color: #7babdb; line-height: 1.3;
+}
+.num .l { font-size: 0.68rem; color: #8a8377; margin-top: 0.2rem; line-height: 1.5; }
+
+/* 学習の流れ */
+.step {
+  padding: 1.1rem 0 1.15rem;
+  border-bottom: 1px dashed #efe8dd;
+}
+.step:last-of-type { border-bottom: none; padding-bottom: 0.4rem; }
+.step .slabel {
+  font-family: 'Zen Maru Gothic', sans-serif; font-weight: 700;
+  font-size: 0.72rem; color: #7babdb; letter-spacing: 0.22em;
+}
+.step h3 {
+  font-family: 'Zen Maru Gothic', sans-serif; font-weight: 700;
+  font-size: 1rem; color: #333; letter-spacing: 0.06em;
+  margin: 0.15rem 0 0.5rem;
+}
+.step .learn {
+  font-size: 0.78rem; color: #999; line-height: 1.7;
+  margin-bottom: 0.45rem;
+}
+.step .learn b {
+  font-weight: 500; color: #b9b1a3; margin-right: 0.4em;
+}
+.step .can { font-size: 0.88rem; color: #555; }
+
+/* ロードマップ */
+.steps { list-style: none; counter-reset: step; margin-top: 0.8rem; }
+.steps li {
+  counter-increment: step; position: relative;
+  padding: 0 0 1.1rem 2.6rem; font-size: 0.88rem;
+}
+.steps li::before {
+  content: counter(step); position: absolute; left: 0; top: 0;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  background: #7babdb; color: #fff; font-weight: 500;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+}
+.steps li:not(:last-child)::after {
+  content: ""; position: absolute; left: 0.85rem; top: 1.9rem; bottom: 0.1rem;
+  width: 2px; background: #dce9f5;
+}
+.steps li strong { display: block; color: #333; font-weight: 500; }
+.steps li span { color: #777; font-size: 0.82rem; }
+
+.btn {
+  display: block; text-align: center; text-decoration: none;
+  padding: 12px; border-radius: 8px; font-size: 0.95rem;
+  font-weight: 500; letter-spacing: 0.08em;
+  background: #7babdb; color: #fff; margin-top: 1rem;
+  transition: background 0.15s ease;
+}
+.btn:hover { background: #6a9acb; }
+.btn:focus-visible { outline: 3px solid #fbef55; outline-offset: 2px; }
+
+footer {
+  text-align: center; font-size: 0.72rem; color: #b9b1a3;
+  letter-spacing: 0.12em; margin-top: 2.4rem;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a class="back" href="./index.html">← トップにもどる</a>
+
+  <div class="pagehead">
+    <h1>講座のご案内</h1>
+    <p class="sub">ユンスル四柱推命講座（全16回）</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="en">GOAL</span>この講座がめざすこと</h2>
+    <p>ユンスル四柱推命の講座では</p>
+    <div class="goal" style="margin-top:0.6rem;"><strong>五行バランスと情景</strong>から命式を読み解けるようになります</div>
+    <div class="goal">鑑定師として活動できる<strong>実践的な知識</strong>が身につきます</div>
+    <p style="margin-top:0.9rem;">命式に良い悪いはありません。命式の持つよさを活かしていく鑑定をしていきます。初めて四柱推命を学ぶ方でもしっかり鑑定できるように、サポート体制を整えています。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="en">OUTLINE</span>講座のかたち</h2>
+    <ul class="spec">
+      <li>少人数のグループ講座（定員5名）</li>
+      <li>90分 × 全16回</li>
+      <li>オリジナルテキスト付</li>
+      <li>アーカイブあり（期間限定）</li>
+      <li>LINEでの命式添削、質問サポート無制限</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="en">CURRICULUM</span>学習の流れ</h2>
+    <p>全16回を、7つのステップで進んでいきます。</p>
+
+    <div class="step">
+      <div class="slabel">STEP 1</div>
+      <h3>四柱推命の土台を知る</h3>
+      <p class="learn"><b>学ぶこと</b>四柱推命とは／陰陽論／五行説／命式のしくみ／陰陽でみる性格</p>
+      <p class="can">四柱推命の世界観と、「占ってはいけないこと」「命式自体に良い悪いはない」という基本姿勢を理解します。陰陽五行から性格の大枠を捉えます。</p>
+    </div>
+
+    <div class="step">
+      <div class="slabel">STEP 2</div>
+      <h3>十干・十二支を読み解く</h3>
+      <p class="learn"><b>学ぶこと</b>十干解説／十二支とは／通根について／命式内の五行</p>
+      <p class="can">日主と十二支の意味、天干と地支のつながりを学び、命式の中の五行を読み解きます。ユンスル四柱推命の核＝五行バランスの土台づくり。</p>
+    </div>
+
+    <div class="step">
+      <div class="slabel">STEP 3</div>
+      <h3>通変と身強・身弱について</h3>
+      <p class="learn"><b>学ぶこと</b>通変で読み解く／身旺と身弱／六十干支／通変星</p>
+      <p class="can">五行バランスから身強・身弱を判定し、通変・通変星を「細部を読み解く道具」として使えるようになります。六十干支でより具体的な十干の意味を理解します。</p>
+    </div>
+
+    <div class="step">
+      <div class="slabel">STEP 4</div>
+      <h3>運の流れを読む</h3>
+      <p class="learn"><b>学ぶこと</b>通変星・十二運星の算出方法と読み方／柱ごとに出る要素／運勢の読み解き／干合について</p>
+      <p class="can">大運・年運といった運勢を読み、「いつ・どんな変化が起きそうか」まで捉えられるようになります。</p>
+    </div>
+
+    <div class="step">
+      <div class="slabel">STEP 5</div>
+      <h3>細かい読み解きと開運法</h3>
+      <p class="learn"><b>学ぶこと</b>内格の鑑定法／死木／用神について／五行別の通変／近貼／十干別の通変の違い</p>
+      <p class="can">命式をより細かく読み解き、命式にとって最も必要なものは何かを見つけ、どう活かしていくかを学びます。</p>
+    </div>
+
+    <div class="step">
+      <div class="slabel">STEP 6</div>
+      <h3>五行の状態と十干別の深い鑑定</h3>
+      <p class="learn"><b>学ぶこと</b>十干ごとの鑑定法／外格について</p>
+      <p class="can">五行の偏りから命式の状態を読み、日主ごとにより詳しく鑑定できるようになります。特殊な命式の扱いまで身につけます。</p>
+    </div>
+
+    <div class="step">
+      <div class="slabel">STEP 7</div>
+      <h3>仕事・相性・そして実践へ</h3>
+      <p class="learn"><b>学ぶこと</b>仕事運について／相性について（日干同士の簡単な相性）／海外生まれの命式の作り方／最後に</p>
+      <p class="can">相談で多い仕事運や相性など、応用テーマへ。海外出生にも対応できるようになり、鑑定師として活動していく心構えで締めくくります。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="en">AFTER</span>卒業後のロードマップ</h2>
+    <p>「学んだあと、本当に鑑定師として動けるの？」という不安にもお応えし、卒業してからもサポートいたします。鑑定師としての道を歩むためにも、存分にサポートを使ってください。</p>
+    <ol class="steps" style="margin-top:1.1rem;">
+      <li><strong>卒業</strong><span>全16回を修了</span></li>
+      <li><strong>モニター鑑定</strong><span>モニター鑑定で実績を積む</span></li>
+      <li><strong>メニュー作成</strong><span>鑑定メニューと価格を決め、周知する</span></li>
+      <li><strong>活動開始</strong><span>鑑定師として一歩を踏み出す</span></li>
+    </ol>
+    <p>卒業後も、命式の添削や質問は<strong style="font-weight:500;color:#5f8fc0;">無期限でサポート</strong>しています。さらに本気で活動したい方には、認定鑑定師コースもあります。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="en">NUMBERS</span>数字で見るユンスル四柱推命</h2>
+    <div class="nums">
+      <div class="num"><div class="v">150名<br>以上</div><div class="l">のべ受講生<br>（再受講含む）</div></div>
+      <div class="num"><div class="v">7名</div><div class="l">認定鑑定師を<br>輩出</div></div>
+      <div class="num"><div class="v">商標<br>登録済</div><div class="l">ユンスル四柱推命<br>独自メソッドの証</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="en">CONSULTATION</span>まずは無料相談から</h2>
+    <p>講座の内容・進め方・受講料は、オンラインの無料相談で詳しくご案内しています。学び方の相談だけでも大丈夫です。</p>
+    <a class="btn" href="https://lin.ee/XSWIx1j" target="_blank" rel="noopener">LINEで無料相談を申し込む</a>
+  </div>
+
+  <footer>&copy; ユンスル四柱推命&reg;</footer>
+
+</div>
+</body>
+</html>
