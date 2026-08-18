@@ -90,6 +90,23 @@ body {
 
 .note-line { font-size: 0.82rem; color: #8a8377; margin-top: 0.9rem; }
 
+/* 動画リスト */
+.vlist { list-style: none; margin-top: 0.4rem; counter-reset: v; }
+.vlist li {
+  counter-increment: v;
+  font-size: 0.9rem; padding: 0.5rem 0 0.5rem 2.1rem;
+  border-bottom: 1px dashed #efe8dd; position: relative;
+}
+.vlist li:last-child { border-bottom: none; }
+.vlist li::before {
+  content: counter(v);
+  position: absolute; left: 0; top: 0.62em;
+  width: 1.5rem; height: 1.5rem; border-radius: 50%;
+  background: #f2f7fc; color: #5f8fc0;
+  font-size: 0.78rem; font-weight: 500;
+  display: flex; align-items: center; justify-content: center;
+}
+
 .btn {
   display: block; text-align: center; text-decoration: none;
   padding: 13px; border-radius: 8px; font-size: 0.95rem;
@@ -158,7 +175,26 @@ footer {
       <li>読み解きの解説書</li>
       <li>使い方ガイド動画（12本）</li>
       <li>ワークシート3種（ダウンロードしてお使いいただけます）</li>
+      <li>問いの例題</li>
     </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="en">VIDEOS</span>使い方ガイド動画の内容</h2>
+    <ol class="vlist">
+      <li>このカードでできること</li>
+      <li>占ってはいけないこと</li>
+      <li>引くための準備、保管方法など</li>
+      <li>五行とは</li>
+      <li>カードの説明・十干（正位置・逆位置あり）</li>
+      <li>カードの説明・十二支（正位置・逆位置あり）</li>
+      <li>カードの説明・十干（正位置・逆位置なし）</li>
+      <li>カードの説明・十二支（正位置・逆位置なし）</li>
+      <li>スプレッドのしかた</li>
+      <li>読み解きに詰まったら..</li>
+      <li>感性の磨き方</li>
+      <li>読み解きの実践</li>
+    </ol>
   </div>
 
   <div class="card">
