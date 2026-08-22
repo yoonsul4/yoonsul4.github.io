@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>よくあるご質問｜ユンスル四柱推命®</title>
+<meta name="description" content="ユンスル四柱推命®の講座・Gogyo Oracle（五行オラクルカード）・鑑定について、よくいただくご質問をまとめました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#efe8dd;
+  --card:#ffffff;
+  --blue:#7babdb;
+  --blue-deep:#5b8fc4;
+  --text:#333333;
+  --muted:#7a7269;
+  --line:#e5ded3;
+  --radius:12px;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;
+  font-size:16px;
+  line-height:1.9;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{
+  max-width:720px;
+  margin:0 auto;
+  padding:20px 20px 64px;
+}
+.back{
+  display:inline-block;
+  margin:8px 0 28px;
+  color:var(--muted);
+  text-decoration:none;
+  font-size:15px;
+}
+.back:hover,.back:focus-visible{color:var(--blue-deep);text-decoration:underline;}
+
+h1{
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-size:28px;
+  font-weight:700;
+  line-height:1.5;
+  color:var(--blue);
+  margin:0 0 10px;
+}
+.lead{
+  color:var(--muted);
+  font-size:15px;
+  margin:0 0 28px;
+}
+
+/* LINEへの案内 */
+.notice{
+  background:var(--card);
+  border-radius:var(--radius);
+  border-left:5px solid var(--blue);
+  padding:22px 24px;
+  margin:0 0 36px;
+}
+.notice p{margin:0;font-size:16px;}
+.notice .strong{
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-weight:700;
+  font-size:18px;
+  display:block;
+  margin-bottom:8px;
+}
+.notice .sub{
+  color:var(--muted);
+  font-size:14px;
+  margin-top:10px;
+  display:block;
+}
+
+/* 目次 */
+.toc{
+  display:flex;
+  flex-wrap:nowrap;
+  gap:8px;
+  margin:0 0 40px;
+  padding:0;
+  list-style:none;
+}
+.toc li{flex:1 1 0;}
+.toc a{
+  display:block;
+  background:var(--card);
+  border-radius:999px;
+  padding:9px 6px;
+  font-size:14.5px;
+  text-align:center;
+  white-space:nowrap;
+  color:var(--text);
+  text-decoration:none;
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-weight:500;
+}
+.toc a:hover,.toc a:focus-visible{background:var(--blue);color:#fff;}
+
+section{margin:0 0 44px;scroll-margin-top:20px;}
+h2{
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-size:21px;
+  font-weight:700;
+  color:var(--blue);
+  margin:0 0 18px;
+  padding-bottom:10px;
+  border-bottom:2px solid var(--blue);
+}
+
+details{
+  background:var(--card);
+  border-radius:var(--radius);
+  margin-bottom:12px;
+  overflow:hidden;
+}
+summary{
+  cursor:pointer;
+  list-style:none;
+  padding:18px 52px 18px 22px;
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-weight:500;
+  font-size:16.5px;
+  line-height:1.7;
+  position:relative;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{
+  content:"";
+  position:absolute;
+  right:24px;
+  top:26px;
+  width:9px;
+  height:9px;
+  border-right:2px solid var(--blue);
+  border-bottom:2px solid var(--blue);
+  transform:rotate(45deg);
+  transition:transform .2s ease;
+}
+details[open] summary::after{transform:rotate(-135deg);}
+summary:focus-visible{outline:3px solid var(--blue);outline-offset:-3px;}
+.answer{
+  padding:0 22px 22px;
+  border-top:1px solid var(--line);
+  margin-top:-2px;
+  padding-top:16px;
+}
+.answer p{margin:0 0 12px;}
+.answer p:last-child{margin-bottom:0;}
+.answer ul{margin:0 0 12px;padding-left:1.3em;}
+.answer li{margin-bottom:6px;}
+.answer a{color:var(--blue-deep);}
+.price{
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-weight:700;
+  font-size:19px;
+}
+.btn{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  text-decoration:none;
+  border-radius:999px;
+  padding:11px 26px;
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-weight:500;
+  font-size:15px;
+  margin-top:6px;
+}
+.btn:hover,.btn:focus-visible{background:var(--blue-deep);}
+
+.sign{
+  text-align:right;
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-size:15px;
+  color:var(--muted);
+  margin-top:40px;
+}
+@media (max-width:520px){
+  .wrap{padding:16px 16px 56px;}
+  h1{font-size:24px;}
+  h2{font-size:19px;}
+  summary{padding:16px 46px 16px 18px;font-size:16px;}
+  .answer{padding:16px 18px 20px;}
+  .notice{padding:20px;}
+  .toc a{font-size:13px;padding:9px 4px;}
+  .toc{gap:6px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;}
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K5XN3MDHSX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K5XN3MDHSX');
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">← トップにもどる</a>
+
+  <h1>よくあるご質問</h1>
+  <p class="lead">講座・Gogyo Oracle・鑑定について、よくいただくご質問をまとめました。</p>
+
+  <div class="notice">
+    <p>
+      <span class="strong">お問い合わせはLINEへどうぞ</span>
+      トーク画面の下の入力欄に<br>
+      お問い合わせ内容をお書きください。
+    </p>
+    <p style="margin-top:16px;">
+      <a class="btn" href="https://lin.ee/XSWIx1j">LINEで質問する</a>
+    </p>
+  </div>
+
+  <ul class="toc">
+    <li><a href="#kouza">講座</a></li>
+    <li><a href="#oracle">Gogyo Oracle</a></li>
+    <li><a href="#kantei">鑑定</a></li>
+  </ul>
+
+  <section id="kouza">
+    <h2>講座について</h2>
+
+    <details>
+      <summary>四柱推命がまったく初めてでも大丈夫ですか？</summary>
+      <div class="answer">
+        <p>初めての方でも、もちろん大丈夫です。実際に、この講座で初めて四柱推命を学び、鑑定師として活動されている方もいらっしゃいます。</p>
+        <p>ユンスル四柱推命®講座では、命式を五行バランスと情景から読み解いていく方法を勉強します。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>どんなことを学べますか？</summary>
+      <div class="answer">
+        <p>90分 × 全16回で、四柱推命の土台から順を追って学んでいきます。命式のしくみ、十干十二支の読み解き、五行バランスから見る身強・身弱、大運や年運といった運の流れ、そして仕事運や相性などの応用テーマまで進みます。</p>
+        <p>修了時には、鑑定師として活動できる実践的な知識が身につくところまでを目指しています。</p>
+        <p>オリジナルテキスト付き。LINEでの命式添削と質問サポートは無制限です。</p>
+        <p><a href="kouza.html">カリキュラムを詳しく見る</a></p>
+      </div>
+    </details>
+
+    <details>
+      <summary>オンラインですか？ 対面もありますか？</summary>
+      <div class="answer">
+        <p>現在開催している講座は、すべてZoomを使ったオンライン講座です。全国どこからでもご受講いただけます。</p>
+        <p>年に数回、対面での交流会も開催しております（参加は自由）。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>参加できない回がある場合はどうなりますか？</summary>
+      <div class="answer">
+        <p>講義はすべて録画しております。講座終了後1か月間、ご視聴いただけます。</p>
+        <p>おやすみされた回は、そちらの動画で学んでいただく形になります。おやすみしてもしなくても動画はお送りしますので、復習にお役立てください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>1クラス何名ですか？</summary>
+      <div class="answer">
+        <p>原則、定員は5名です。</p>
+        <p>お一人おひとりの理解度を見ながら進めたいので、少人数で開催しています。そのため、ご希望の期にお入りいただけない場合があります。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>次の開講はいつですか？</summary>
+      <div class="answer">
+        <p>現在、次の2クラスを募集しています。</p>
+        <ul>
+          <li><strong style="color:var(--blue);">12期</strong>　毎週水曜 10:00〜11:30<br>2026年10月7日〜2027年2月3日</li>
+          <li><strong style="color:var(--blue);">13期</strong>　毎週土曜 10:00〜11:30<br>2026年10月17日〜2027年2月13日</li>
+        </ul>
+        <p>お休みの日程は<a href="kouza.html">講座ページ</a>に掲載しています。残席の状況は変わりますので、LINEでお問い合わせください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>受講料はいくらですか？</summary>
+      <div class="answer">
+        <p>料金につきましては、講座の内容やサポート体制など、全体の詳細とあわせて、オンラインの無料相談にてご案内しております。</p>
+        <p>学べる内容は<a href="kouza.html">講座ページ</a>に詳しく掲載しておりますので、あわせてご覧ください。</p>
+        <p>ご希望の方は、LINEに「講座相談」とお送りください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>修了後、鑑定師として活動できますか？</summary>
+      <div class="answer">
+        <p>修了後に鑑定師として活動されている方は、多くいらっしゃいます。</p>
+        <p>ご希望の方には、認定鑑定師の制度もご用意しています。認定を受けると、ユンスル四柱推命®の名称を使って活動していただけます。また、限定の月1の勉強会にもご参加いただけます。</p>
+        <p>認定を受けなくても、鑑定活動することは可能です。</p>
+        <p><a href="https://4suimei.net/nintei.html">認定鑑定師のご紹介</a></p>
+      </div>
+    </details>
+  </section>
+
+  <section id="oracle">
+    <h2>Gogyo Oracle について</h2>
+
+    <details>
+      <summary>どんなカードですか？</summary>
+      <div class="answer">
+        <p>十干10枚と十二支12枚、全22枚。四柱推命の世界がベースになっています。</p>
+        <p>イラストレーターのizuさんによる描き下ろしイラストを使ったオリジナルオラクルカードです。</p>
+        <p><a href="https://4suimei.net/oracle.html">Gogyo Oracle のページを見る</a></p>
+      </div>
+    </details>
+
+    <details>
+      <summary>セット内容を教えてください</summary>
+      <div class="answer">
+        <ul>
+          <li>オラクルカード（22枚・箱付き）</li>
+          <li>読み解きの解説書</li>
+          <li>使い方ガイド動画（12本）</li>
+          <li>ワークシート3種（ダウンロードしてお使いいただけます）</li>
+          <li>問いの例題</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>四柱推命を学んでいなくても使えますか？</summary>
+      <div class="answer">
+        <p>四柱推命の知識は不要です。カードから入って、五行の世界に触れる入口としてもお使いいただけます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>四柱推命を学んでいる人にはどう役立ちますか？</summary>
+      <div class="answer">
+        <p>十干十二支を「感覚」で掴んでいくのに向いています。命式を読むときにも、それぞれの十干十二支が持つ情景が浮かびやすくなります。</p>
+        <p>四柱推命と組み合わせて使えるようになりたい方にもおすすめです。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>どこで買えますか？</summary>
+      <div class="answer">
+        <p>販売ページからお申し込みいただけます。詳しくは販売ページをご覧ください。</p>
+        <p><a class="btn" href="https://mosh.jp/services/389867?openExternalBrowser=1">販売ページを見る</a></p>
+      </div>
+    </details>
+
+  </section>
+
+  <section id="kantei">
+    <h2>鑑定について</h2>
+
+    <details>
+      <summary>どんなことがわかりますか？</summary>
+      <div class="answer">
+        <p>命式を五行のバランスと情景から読み解きます。</p>
+        <p>生まれ持った性質、運勢の流れとそれによる変化、得意なこと苦手なこと、開運法などをお伝えします。</p>
+        <p><a href="kantei.html">鑑定ページを見る</a></p>
+      </div>
+    </details>
+
+    <details>
+      <summary>鑑定に必要な情報は何ですか？</summary>
+      <div class="answer">
+        <p>生年月日、生まれた時刻、生まれた場所（都道府県）をお知らせください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>生まれた時間がわかりません<br>鑑定できますか？</summary>
+      <div class="answer">
+        <p>生まれた時間が分からなくても鑑定できますので、ご安心ください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>鑑定募集はいつですか？</summary>
+      <div class="answer">
+        <p>鑑定は不定期で募集しております。</p>
+        <p>募集はLINEでのみご案内しますので、お友だち登録してお待ちいただけたらと思います。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>鑑定料はいくらですか？</summary>
+      <div class="answer">
+        <p class="price">16,500円（税込）</p>
+        <ul>
+          <li>60分のZoomミーティングでの鑑定</li>
+          <li>オリジナル鑑定書付き</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <div class="notice">
+    <p>
+      <span class="strong">解決しませんでしたか？</span>
+      LINEからご覧の方は、このページを閉じるとトーク画面にもどります。<br>
+      トーク画面の下の入力欄に、お問い合わせ内容をお書きください。
+      <span class="sub">はじめての方は、下のボタンから友だち追加していただくとメッセージが送れます。</span>
+    </p>
+    <p style="margin-top:16px;">
+      <a class="btn" href="https://lin.ee/XSWIx1j">LINEで質問する</a>
+    </p>
+  </div>
+
+  <p class="sign">ユンスル四柱推命®︎　しょうこ</p>
+
+</div>
+</body>
+</html>
