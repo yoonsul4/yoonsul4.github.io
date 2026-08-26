@@ -44,14 +44,13 @@ body {
 
 /* 鑑定師リスト */
 .member {
-  display: flex; align-items: center; gap: 0.9rem;
-  padding: 0.85rem 0.2rem;
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.9rem 0.3rem;
   border-bottom: 1px dashed #efe8dd;
   text-decoration: none; color: #333;
   transition: background 0.15s ease;
 }
 .member:last-of-type { border-bottom: none; }
-.member:hover { background: #f8f5ef; border-radius: 8px; }
 .avatar {
   width: 52px; height: 52px; flex: 0 0 52px;
   border-radius: 50%;
@@ -68,16 +67,13 @@ body {
 }
 .avatar .inner img { width: 100%; height: 100%; object-fit: cover; }
 .minfo { flex: 1; min-width: 0; }
+.member:hover { background: #f8f5ef; border-radius: 8px; }
 .handle {
-  font-size: 0.92rem; font-weight: 500; color: #333;
-  overflow-wrap: anywhere;
+  font-size: 1.02rem; font-weight: 500; color: #333;
+  overflow-wrap: anywhere; margin-bottom: 0.15rem;
 }
-.handle .at { color: #b9b1a3; font-weight: 400; }
-.mlabel { font-size: 0.72rem; color: #8a8377; letter-spacing: 0.05em; }
-.go {
-  flex: 0 0 auto; font-size: 0.78rem; color: #7babdb;
-  letter-spacing: 0.05em;
-}
+.mlabel { font-size: 0.78rem; color: #8a8377; letter-spacing: 0.05em; }
+.mlabel .at { color: #b9b1a3; }
 
 footer {
   text-align: center; font-size: 0.72rem; color: #b9b1a3;
@@ -99,9 +95,12 @@ footer {
     <p>ユンスル四柱推命を学び、認定試験に合格した認定鑑定師です。それぞれのInstagramで活動をご覧いただけます。</p>
 
     <div id="members"></div>
+  </div>
     <script>
     // ★ 鑑定師の追加・変更はこのリストだけ編集すればOK
     //    handle: Instagramのユーザー名 / name: 表示名
+    //    アイコンは icons/ユーザー名.jpg を置けば自動で表示されます
+    //    (アイコン変更は同名で画像を差し替えるだけ。画像がない人は頭文字が表示されます)
     const KANTEISHI = [
       { handle: 'itasan_kantei',     name: 'いたさん。' },
       { handle: 'oka_yukao',         name: 'おかゆかお' },
@@ -110,10 +109,9 @@ footer {
     ];
 
     document.getElementById('members').innerHTML = KANTEISHI.map(m => `
-      <a class="member" href="https://www.instagram.com/${m.handle}/" target="_blank" rel="noopener">
+      <a class="member" href="https://www.instagram.com/${m.handle}/" target="_blank" rel="noopener" data-initial="${m.name.charAt(0)}">
         <div class="avatar"><div class="inner">
-          <img src="https://unavatar.io/instagram/${m.handle}" alt=""
-               loading="lazy"
+          <img src="icons/${m.handle}.jpg" alt="" loading="lazy"
                onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span>'+this.closest('.member').dataset.initial+'</span>')">
         </div></div>
         <div class="minfo">
@@ -121,13 +119,7 @@ footer {
           <div class="mlabel"><span class="at">@</span>${m.handle}</div>
         </div>
       </a>`).join('');
-    // フォールバック用イニシャル
-    document.querySelectorAll('.member').forEach((el, i) => {
-      el.dataset.initial = KANTEISHI[i].name.charAt(0);
-    });
     </script>
-
-  </div>
 
   <footer>&copy; ユンスル四柱推命&reg;</footer>
 
