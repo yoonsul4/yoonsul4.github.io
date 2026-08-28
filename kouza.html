@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K5XN3MDHSX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-K5XN3MDHSX');
-</script>
-<meta charset="UTF-8">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
@@ -149,6 +139,34 @@ body {
 .term .sched { font-size: 0.92rem; color: #333; }
 .term .rest { font-size: 0.75rem; color: #b9b1a3; margin-top: 0.25rem; }
 
+/* よくあるご質問(開閉式) */
+details.qa {
+  border: 1.5px solid #efe8dd; border-radius: 10px;
+  margin-top: 0.8rem; overflow: hidden;
+}
+details.qa summary {
+  cursor: pointer; list-style: none;
+  padding: 0.85rem 2.4rem 0.85rem 1rem;
+  font-family: 'Zen Maru Gothic', sans-serif; font-weight: 500;
+  font-size: 0.92rem; color: #333; line-height: 1.7;
+  position: relative;
+}
+details.qa summary::-webkit-details-marker { display: none; }
+details.qa summary::after {
+  content: ""; position: absolute; right: 1.1rem; top: 1.25rem;
+  width: 8px; height: 8px;
+  border-right: 2px solid #7babdb; border-bottom: 2px solid #7babdb;
+  transform: rotate(45deg); transition: transform 0.2s ease;
+}
+details.qa[open] summary::after { transform: rotate(-135deg); }
+details.qa .qa-a {
+  padding: 0.2rem 1rem 1rem;
+  border-top: 1px dashed #efe8dd; padding-top: 0.8rem;
+}
+details.qa .qa-a p { font-size: 0.88rem; color: #555; margin-bottom: 0.7rem; }
+details.qa .qa-a p:last-child { margin-bottom: 0; }
+details.qa .qa-a a { color: #5f8fc0; }
+
 .btn {
   display: block; text-align: center; text-decoration: none;
   padding: 12px; border-radius: 8px; font-size: 0.95rem;
@@ -163,12 +181,15 @@ footer {
   text-align: center; font-size: 0.72rem; color: #b9b1a3;
   letter-spacing: 0.12em; margin-top: 2.4rem;
 }
-  footer {
-  text-align: center; font-size: 0.72rem; color: #b9b1a3;
-  letter-spacing: 0.12em; margin-top: 2.4rem;
-}
-footer a { color: inherit; text-decoration: none; }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K5XN3MDHSX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K5XN3MDHSX');
+</script>
 </head>
 <body>
 <div class="container">
@@ -293,12 +314,85 @@ footer a { color: inherit; text-decoration: none; }
   </div>
 
   <div class="card">
+    <h2><span class="en">FAQ</span>よくあるご質問</h2>
+
+    <details class="qa">
+      <summary>四柱推命がまったく初めてでも大丈夫ですか？</summary>
+      <div class="qa-a">
+        <p>初めての方でも、もちろん大丈夫です。実際に、この講座で初めて四柱推命を学び、鑑定師として活動されている方もいらっしゃいます。</p>
+        <p>ユンスル四柱推命®講座では、命式を五行バランスと情景から読み解いていく方法を勉強します。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>どんなことを学べますか？</summary>
+      <div class="qa-a">
+        <p>90分 × 全16回で、四柱推命の土台から順を追って学んでいきます。命式のしくみ、十干十二支の読み解き、五行バランスから見る身強・身弱、大運や年運といった運の流れ、そして仕事運や相性などの応用テーマまで進みます。</p>
+        <p>修了時には、鑑定師として活動できる実践的な知識が身につくところまでを目指しています。</p>
+        <p>オリジナルテキスト付き。LINEでの命式添削と質問サポートは無制限です。</p>
+        <p>詳しくは、このページの「学習の流れ」をご覧ください。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>オンラインですか？ 対面もありますか？</summary>
+      <div class="qa-a">
+        <p>現在開催している講座は、すべてZoomを使ったオンライン講座です。全国どこからでもご受講いただけます。</p>
+        <p>年に数回、対面での交流会も開催しております（参加は自由）。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>参加できない回がある場合はどうなりますか？</summary>
+      <div class="qa-a">
+        <p>講義はすべて録画しております。講座終了後1か月間、ご視聴いただけます。</p>
+        <p>おやすみされた回は、そちらの動画で学んでいただく形になります。おやすみしてもしなくても動画はお送りしますので、復習にお役立てください。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>1クラス何名ですか？</summary>
+      <div class="qa-a">
+        <p>原則、定員は5名です。</p>
+        <p>お一人おひとりの理解度を見ながら進めたいので、少人数で開催しています。そのため、ご希望の期にお入りいただけない場合があります。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>次の開講はいつですか？</summary>
+      <div class="qa-a">
+        <p>このページの「現在募集中の日程」をご覧ください。残席の状況は変わりますので、LINEでお問い合わせください。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>受講料はいくらですか？</summary>
+      <div class="qa-a">
+        <p>料金につきましては、講座の内容やサポート体制など、全体の詳細とあわせて、オンラインの無料相談にてご案内しております。</p>
+        <p>ご希望の方は、LINEに「講座相談」とお送りください。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>修了後、鑑定師として活動できますか？</summary>
+      <div class="qa-a">
+        <p>修了後に鑑定師として活動されている方は、多くいらっしゃいます。</p>
+        <p>ご希望の方には、認定鑑定師の制度もご用意しています。認定を受けると、ユンスル四柱推命®の名称を使って活動していただけます。また、限定の月1の勉強会にもご参加いただけます。</p>
+        <p>認定を受けなくても、鑑定活動することは可能です。</p>
+        <p><a href="./nintei.html">認定鑑定師のご紹介</a></p>
+      </div>
+    </details>
+
+    <p style="margin-top:1rem; margin-bottom:0; font-size:0.85rem;">その他のご質問は<a href="./faq.html" style="color:#5f8fc0;">よくあるご質問</a>のページをご覧ください。</p>
+  </div>
+
+  <div class="card">
     <h2><span class="en">CONSULTATION</span>まずは無料相談から</h2>
     <p>講座の内容・進め方・受講料は、オンラインの無料相談で詳しくご案内しています。学び方の相談だけでも大丈夫です。<br>ご希望の方はLINEに「講座相談」と送ってください。</p>
     <a class="btn" href="https://lin.ee/XSWIx1j" target="_blank" rel="noopener">LINEで無料相談を申し込む</a>
   </div>
 
-  <footer>&copy; ユンスル四柱推命&reg; ｜ <a href="./privacy.html">プライバシーポリシー</a></footer>
+  <footer>&copy; ユンスル四柱推命&reg;</footer>
 
 </div>
 </body>
